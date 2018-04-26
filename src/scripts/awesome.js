@@ -33,7 +33,7 @@ const cardFactory = (classList, textContent) => {
 const createCardButton = buttonFactory("button--submit", "Create Card")
 const cardTextInput = inputFieldFactory("input--text", "Enter card text here", "text")
 
-createCardButton.addEventListener("click", function(){
+createCardButton.addEventListener("click", function() {
     const userEntry = cardTextInput.value
     output.appendChild(cardFactory("card", userEntry))
     cardTextInput.value = ""
@@ -42,8 +42,9 @@ createCardButton.addEventListener("click", function(){
 
 
 
-fragment.appendChild(buttonFactory("button--submit", "Create Card"))
-fragment.appendChild(inputFieldFactory("input--text", "Enter card text here", "text"))
+fragment.appendChild(createCardButton)
+fragment.appendChild(cardTextInput)
+
 
 
 output.appendChild(fragment)
